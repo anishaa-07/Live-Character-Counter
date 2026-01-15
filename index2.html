@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Character Counter</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Live Character Counter</h1>
+    <p class="lead">Type in the box. The counter updates live and stops new input after the limit.</p>
+
+    <div class="textarea-wrap">
+      <textarea id="message"
+                aria-label="Message (max 100 characters)"
+                aria-describedby="charHint"
+                maxlength="100"
+                placeholder="Start typing..."></textarea>
+
+      <div class="counter" aria-hidden="false">
+        <div id="status" class="status green" role="status" aria-live="polite">100</div>
+        <small id="charHint">Characters left</small>
+      </div>
+    </div>
+
+    <div class="hint" id="info" aria-live="polite" style="margin-top:12px; color:var(--muted);">
+      You can type, paste, or delete. When the counter reaches 0, further input is prevented.
+    </div>
+  </main>
+</body>
+<script src="Script2.js"></script>
+</html>
